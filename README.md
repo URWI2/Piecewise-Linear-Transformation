@@ -16,3 +16,12 @@ If you think about using this code to analyze your own problem settings, here is
 4. Now you can induce the desired uncertainty on the data by applying the 'imputation.py' dataset. This will delete certain data entries in your dataset and save the resulting dataset and the pdfs describing the uncertainty in the correct format for future use in your dataset/data folder. If the uncertainty in your data is already given, you can define a distribution class with the respective pdf instead.
 5. If the exactness of the propagation should be assessed, one now has to use the 'Get_Sample_Baseline.py' script to generate the baseline output distributions via large scale Monte Carlo Simulations. They will be saved in the correct format for the evaluation under dataset/histos.
 6. You are now ready to apply the 'Exactness.py' script, which propagates the uncertainty through your neural network via PLT. You can also employ the competing methods from our experiments and save all results to your dataset/results folder in the form of pickle files.
+
+## Reproducibility (conda)
+
+As an alternative to installing from `requirements.txt`, a `environment.yml` is provided to create a conda environment with dependencies. This is done with the following commands:
+
+```bash
+conda env create -f environment.yml
+conda activate plt
+```
